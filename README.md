@@ -1,28 +1,32 @@
 # Parse run times
 
+JS Shell: `mkdir build_OPT.OBJ && cd build_OPT.OBJ && ../configure --enable-optimize && make -j8`
+
+debugger.js is 2mb and 65k lines
+
 ```
-➜  Feb-07 node babylon.js
-parse  1504
-parse  1640
-parse  918
-parse  864
-parse  838
-parse  945
-parse  810
-parse  888
-parse  1192
-parse  769
-time: 10370 - avg 942.7272727272727
-➜  Feb-07 ~/src/mozilla/gecko/js/src/build_DBG.OBJ/dist/bin/js shell.js
-parse  617
+➜  parse-times node babylon.js
+parse  1084
+parse  1050
+parse  824
+parse  848
+parse  843
+parse  960
+parse  831
+parse  805
+parse  940
+parse  689
+time: 8876 - avg 806.9090909090909
+➜  parse-times ~/src/mozilla/gecko/js/src/build_DBG.OBJ/dist/bin/js shell.js
+parse  618
+parse  685
+parse  671
 parse  711
-parse  704
-parse  677
-parse  594
-parse  804
-parse  631
-parse  814
-parse  687
-parse  703
-time: 6942 - avg 631.0909090909091
+parse  602
+parse  936
+parse  566
+parse  758
+parse  676
+parse  658
+time: 6881 - avg 625.5454545454545
 ```
